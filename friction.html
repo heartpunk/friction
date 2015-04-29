@@ -1,0 +1,38 @@
+<head>
+  <title>friction</title>
+  <meta name="viewport" content="initial-scale=1">
+</head>
+
+<body><div class="main">
+  {{> thing_form}}
+  {{> things}}
+</div></body>
+
+
+<template name="things">
+  <ul class="things">{{#each things}}
+    <li class="thing">
+      <div class="text">{{blurb}}
+        <div class="date">
+          {{start_date}}
+        </div>
+      </div>
+      <button class="delete">X</button>
+      <div class="bar-viz">
+        <div class="colored" style="width:{{relative_date}}%;"></div>
+      </div>
+    </li>
+  {{/each}}</ul>
+</template>
+
+<template name="thing_form">
+  <form class="thing form">
+    <div class='field'>
+      <input type="text" name="blurb" value="{{blurb}}" size="60" placeholder="a quick description of what the thing is?"/>
+    </div>
+    <div class='field'>
+      <input type="text" name="start_date" value="{{start_date}}" size="60" placeholder="when did you first have interest in this (roughly)?"/>
+    </div>
+    <input type="submit" value="save"/>
+  </form>
+</template>

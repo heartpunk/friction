@@ -1,0 +1,94 @@
+/* CSS declarations go here */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #eee;
+  color: #0a0a0a;
+}
+
+@media (max-width: 600px) {
+  .main {
+    margin: 0;
+  }
+
+  .delete {
+    display: none;
+  }
+
+  .date {
+    display: none;
+  }
+
+  .text {
+    float: left;
+    color: #eee;
+  }
+
+  li.thing {
+    background-color: #444;
+  }
+}
+
+@media (min-width: 601px) {
+  .main {
+    margin: 0 12.5%;
+  }
+
+  ul li:nth-child(2n - 1) .text {
+    background-color: #ddd;
+  }
+
+  .date {
+    float:right;
+    text-align:right;
+  }
+}
+
+li.thing span {
+  padding: 0 .25em;
+}
+
+li.thing {
+  margin: 0.25em 0;
+  display: flex; /* YO GODDAMN MUSCLES BITCH. */
+  justify-content: space-between;
+  flex-basis: 0;
+  height: 1.5em;
+}
+
+li.thing .text {
+  padding: 0.2em 0.2em;
+  flex: 3;
+}
+
+li.thing button {
+  width: 40px;
+}
+
+li.thing .bar-viz {
+  flex: .5;
+  height: 100%;
+}
+
+li.thing .bar-viz .colored {
+  background-color: #4068a5;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0.25em;
+  background: white;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 0.25em;
+}
+
+input {
+  margin: 0.25em 0;
+}
